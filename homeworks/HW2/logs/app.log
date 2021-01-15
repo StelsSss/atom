@@ -1,0 +1,5 @@
+2021-01-15 17:29:35.824 INFO [main] [BullsCows] [main] [BullsCows.main(BullsCows.java:28)] - Logger run!
+2021-01-15 17:29:35.913 INFO [main] [BullsCows] [getDictionary] [BullsCows.getDictionary(BullsCows.java:20)] - Dictionary loaded!
+2021-01-15 17:29:35.915 INFO [main] [BullsCows] [main] [BullsCows.main(BullsCows.java:31)] - Start B's&C's Game!
+2021-01-15 17:29:35.916 INFO [main] [Game] [start] [Game.start(Game.java:37)] - Logger run!
+2021-01-15 17:29:35.916 INFO [main] [Game] [start] [Game.start(Game.java:42)] - Secret word is unary
