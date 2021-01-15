@@ -51,4 +51,42 @@ public class ChatClientTest {
         System.out.println(response.body().string());
         Assert.assertEquals(200, response.code());
     }
+
+    @Test
+    public void logout() throws IOException {
+        ChatClient.login(MY_NAME_IN_CHAT);
+        Response response = ChatClient.logout(MY_NAME_IN_CHAT);
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void ban() throws IOException {
+        ChatClient.login(MY_NAME_IN_CHAT);
+        Response response = ChatClient.ban(MY_NAME_IN_CHAT);
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+        Assert.assertEquals(200, response.code());
+        ChatClient.unban(MY_NAME_IN_CHAT);
+    }
+
+    @Test
+    public void unban() throws IOException {
+        ChatClient.login(MY_NAME_IN_CHAT);
+        ChatClient.ban(MY_NAME_IN_CHAT);
+        Response response = ChatClient.unban(MY_NAME_IN_CHAT);
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void rename() throws IOException {
+        ChatClient.login(MY_NAME_IN_CHAT);
+        Response response = ChatClient.rename(MY_NAME_IN_CHAT, "JUST_NEW_NAME");
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+        Assert.assertEquals(200, response.code());
+    }
 }
