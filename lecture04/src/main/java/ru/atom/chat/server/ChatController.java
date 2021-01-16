@@ -78,6 +78,7 @@ public class ChatController {
             return ResponseEntity.ok().build();
         }
     }
+
     /**
      * curl -X POST -i localhost:8080/chat/say -d "name=I_AM_STUPID&msg=Hello everyone in this chat"
      */
